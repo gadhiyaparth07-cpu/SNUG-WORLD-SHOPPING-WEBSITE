@@ -1,0 +1,8 @@
+{
+  "name": "SNUG WORLD — Streetwear Flagship & Showroom",
+  "description": "Premium independent streetwear showroom featuring oversized tees, distressed cuts, signature hanging rod showcase, upward liquid color-climb transformations, and limited releases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

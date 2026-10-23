@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #F5F3EE;
+    --charcoal: #171717;
+    --washed-black: #343434;
+    --soft-grey: #B8B6B1;
+    --acid-green: #A5FF00;
+  }
+
+  body {
+    background-color: #F5F3EE;
+    color: #171717;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-heading {
+  font-family: 'Anton', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Studio showroom subtle vignette */
+.showroom-backdrop {
+  background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.95) 0%, rgba(245, 243, 238, 0.9) 65%, rgba(235, 232, 224, 0.95) 100%);
+}
+
+/* Custom 3D perspective containers */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #EFECE5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8B6B1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #343434;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Marquee continuous scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Upward color liquid wave reveal */
+@keyframes dyeWavePulse {
+  0%, 100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(165, 255, 0, 0.7));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 16px rgba(165, 255, 0, 1));
+  }
+}
+
+.dye-divider-glow {
+  animation: dyeWavePulse 1.2s infinite ease-in-out;
+}
